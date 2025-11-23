@@ -24,7 +24,7 @@ jobs:
 
       - uses: actions/setup-python@v6
         with:
-          python-version: 3.13
+          python-version: 3.x
 
       - run: pip install pre-commit
       - run: SKIP=mypy pre-commit run --all-files
@@ -39,7 +39,7 @@ jobs:
 
       - uses: actions/setup-python@v6
         with:
-          python-version: 3.13
+          python-version: 3.x
 
       - run: pip install pre-commit
       - run: pre-commit run mypy --all-files
@@ -74,6 +74,9 @@ jobs:
           - tox_job: py313
             python: "3.13"
             os_version: "ubuntu-24.04"
+          - tox_job: py314
+            python: "3.14"
+            os_version: "ubuntu-24.04"
 
           - tox_job: py39
             python: "3.9"
@@ -98,6 +101,9 @@ jobs:
             os_version: "windows-2022"
           - tox_job: py313
             python: "3.13"
+            os_version: "windows-2022"
+          - tox_job: py314
+            python: "3.14"
             os_version: "windows-2022"
 
     steps:
