@@ -51,7 +51,7 @@ jobs:
       matrix:
         include:
           - tox_job: pypy3-no_pycurl
-            python: "pypy-3.10"
+            python: "pypy3.11"
             os_version: "ubuntu-24.04"
           - tox_job: py310
             python: "3.10"
@@ -70,7 +70,7 @@ jobs:
             os_version: "ubuntu-24.04"
 
           - tox_job: pypy3-no_pycurl
-            python: "pypy-3.10"
+            python: "pypy3.11"
             os_version: "windows-2022"
           - tox_job: py310
             python: "3.10"
